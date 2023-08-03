@@ -43,6 +43,10 @@ let package = Package(
               .headerSearchPath("_repo/src/ucd-tools/src/include"),
               .define("ESPEAK_NG_API", to: ""),
               .define("N_PATH_HOME", to: "1024"),
+              .define("HAVE_UNISTD_H", to: "0"),
+              .unsafeFlags([
+                "-w"
+              ])
           ]
       ),
   ]
